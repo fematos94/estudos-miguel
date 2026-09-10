@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4f6fdc">
+<title>Matemática — Adição e Subtração</title>
+<style>
+:root {
+  --blue:#4f6fdc; --blue2:#7ea4ff; --purple:#7c61d2; --green:#2d9d78;
+  --red:#e85d75; --yellow:#ffd86a; --ink:#263548; --muted:#66788a;
+  --paper:#ffffff; --bg:#f5f8ff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#f7faff,#fffef8);color:var(--ink)}
+main{max-width:1180px;margin:auto;padding:18px}
+.hero{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;border-radius:30px;padding:30px;box-shadow:0 16px 40px #39589a26}
+.hero h1{font-size:clamp(32px,5vw,56px);margin:8px 0 10px}
+.hero p{font-size:18px;line-height:1.6;max-width:850px;margin:0}
+.badge{display:inline-block;padding:8px 14px;border-radius:999px;background:#ffffff22;border:1px solid #ffffff55;font-weight:700}
+.section{margin-top:22px;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 10px 28px #22335512}
+.section h2{margin:0 0 12px;color:var(--blue);font-size:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.info{border:2px solid #e2e9f5;border-radius:18px;padding:15px;background:#fbfdff}
+.info h3{margin:0 0 6px;font-size:19px}
+.info p{margin:0;line-height:1.5}
+.summary{background:#fff8d8;border:2px solid #ffe08a}
+.filters,.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+button{cursor:pointer;border:0;border-radius:14px;padding:11px 15px;font-size:15px;font-weight:750}
+.filter{background:#eef3fb;color:#334}
+.filter.active,.primary{background:var(--purple);color:#fff}
+.secondary{background:#eef2f6;color:#334}
+.quiz-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(335px,1fr));gap:18px;margin-top:18px}
+.qcard{border:2px solid #e2e8f1;border-radius:22px;overflow:hidden;background:#fff}
+.qhead{padding:14px 16px;background:linear-gradient(135deg,#f5f9ff,#fffdf7);border-bottom:1px solid #e8edf4}
+.qhead h3{margin:0;font-size:20px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.tag{font-size:12px;font-weight:750;border-radius:999px;padding:6px 9px;background:#edf3ff;color:#365e9b}
+.tag.sub{background:#fff0f4;color:#b33e5c}
+.visual{padding:14px;background:#fcfdff;border-bottom:1px solid #e8edf4}
+.canvas{min-height:190px;border-radius:18px;border:2px dashed #dbe5f2;background:linear-gradient(180deg,#fff,#f7fbff);padding:14px;display:flex;align-items:center;justify-content:center}
+.scene{width:100%;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center}
+.group{flex:1 1 135px;min-width:130px;background:#fff;border:1px solid #e1e7ef;border-radius:16px;padding:12px;text-align:center}
+.group .name{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:8px}
+.count{font-size:26px;font-weight:800;margin-top:6px}
+.objects{font-size:26px;line-height:1.55;letter-spacing:2px}
+.body{padding:16px}
+.question{font-size:17px;line-height:1.55;margin:0 0 12px}
+.option{display:block;border:1px solid #dfe5ec;border-radius:12px;padding:11px 12px;margin:8px 0;background:#fff;cursor:pointer}
+.option:hover{background:#f8fbff}
+.correct{background:#ebfbf1!important;border-color:#7ad49a!important}
+.wrong{background:#fff1f4!important;border-color:#ff9bb0!important}
+.feedback{display:none;margin-top:10px;padding:12px;border-radius:14px;background:#f8fbff;border:1px solid #dfe7f0;line-height:1.5}
+#result{display:none;margin-top:16px;padding:18px;border-radius:18px;background:#effcf5;border:2px solid #bee6cb;font-size:18px;line-height:1.6}
+.note{margin-top:16px;padding:14px;border-radius:14px;background:#eef7ff;border-left:5px solid var(--blue)}
+footer{padding:26px 0 10px;text-align:center;color:#738190;font-size:14px}
+@media(max-width:700px){main{padding:12px}.section{padding:16px}.quiz-grid{grid-template-columns:1fr}}
+@media print{body{background:white}.hero,.section{box-shadow:none}.actions,.filters{display:none!important}.qcard{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+  <span class="badge">📘 Material interativo completo</span>
+  <h1>Matemática — Adição e Subtração</h1>
+  <p>Estudo inspirado nas páginas 76 a 101 da apostila, com novas situações, novos valores e ilustrações próprias. O arquivo é totalmente autônomo: não depende de imagens externas nem de internet para funcionar depois de aberto.</p>
+</section>
+
+<section class="section summary">
+  <h2>Resumo rápido</h2>
+  <div class="cards">
+    <div class="info"><h3>➕ Juntar</h3><p>Somar duas ou mais quantidades.</p></div>
+    <div class="info"><h3>➕ Acrescentar</h3><p>Colocar mais em uma quantidade que já existe.</p></div>
+    <div class="info"><h3>➖ Perder</h3><p>Quando parte da quantidade deixa de estar conosco.</p></div>
+    <div class="info"><h3>➖ Retirar</h3><p>Tirar uma parte de uma quantidade.</p></div>
+    <div class="info"><h3>🧩 Completar</h3><p>Descobrir quanto falta para chegar a um total.</p></div>
+    <div class="info"><h3>⚖️ Comparar</h3><p>Descobrir quanto uma quantidade tem a mais ou a menos que outra.</p></div>
+    <div class="info"><h3>📏 Reta numérica</h3><p>Na adição, avançamos; na subtração, voltamos.</p></div>
+    <div class="info"><h3>🔢 Decompor</h3><p>Separar um número em partes menores para facilitar o cálculo.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Atividades com ilustrações</h2>
+  <p>As questões abaixo são novas, mas trabalham o mesmo raciocínio da apostila. Escolha as respostas e depois clique em <strong>Corrigir atividades</strong>.</p>
+  <div class="filters">
+    <button type="button" class="filter active" onclick="filtrar('Todos',this)">Todas</button>
+    <button type="button" class="filter" onclick="filtrar('Adição',this)">Só adição</button>
+    <button type="button" class="filter" onclick="filtrar('Subtração',this)">Só subtração</button>
+  </div>
+  <form id="quiz">
+    <div id="grid" class="quiz-grid"></div>
+    <div class="note"><strong>Dica:</strong> primeiro observe a figura, depois leia o enunciado. Tente fazer a conta mentalmente antes de olhar as alternativas.</div>
+    <div class="actions">
+      <button type="button" class="primary" onclick="corrigir()">✅ Corrigir atividades</button>
+      <button type="reset" class="secondary" onclick="refazer()">🔄 Refazer</button>
+      <button type="button" class="secondary" onclick="window.print()">🖨️ Imprimir</button>
+    </div>
+    <div id="result"></div>
+  </form>
+</section>
+
+<footer>Material de estudo de Matemática — adição e subtração.</footer>
+</main>
+
+<script>
+const atividades=[{"grupo":"Adição","titulo":"Bolas no cesto","contexto":"Juntar","pergunta":"No cesto há 6 bolas e no chão há 4. Quantas bolas há ao todo?","alternativas":["8","10","12"],"correta":1,"explicacao":"6 + 4 = 10.","visual":["balls",6,4]},{"grupo":"Adição","titulo":"Camisas no varal","contexto":"Juntar","pergunta":"Há 4 camisas verdes, 3 vermelhas e 5 azuis. Quantas camisas há no total?","alternativas":["11","12","13"],"correta":1,"explicacao":"4 + 3 + 5 = 12.","visual":["shirts",4,3,5]},{"grupo":"Adição","titulo":"Copos para a turma","contexto":"Acrescentar","pergunta":"Joana levou 7 copos e Pedro levou mais 5. Quantos copos levaram juntos?","alternativas":["11","12","13"],"correta":1,"explicacao":"7 + 5 = 12.","visual":["cups",7,5]},{"grupo":"Adição","titulo":"Medalhas da gincana","contexto":"Juntar","pergunta":"Rafa ganhou 3 medalhas de manhã e 4 à tarde. Quantas ganhou?","alternativas":["6","7","8"],"correta":1,"explicacao":"3 + 4 = 7.","visual":["medals",3,4]},{"grupo":"Adição","titulo":"Carrinhos bate-bate","contexto":"Acrescentar","pergunta":"Já havia 5 crianças brincando. Entraram mais 4. Quantas ficaram?","alternativas":["8","9","10"],"correta":1,"explicacao":"5 + 4 = 9.","visual":["cars",5,4]},{"grupo":"Adição","titulo":"Chapéus de festa","contexto":"Acrescentar","pergunta":"Na mesa há 8 chapéus e chegaram mais 6. Quantos há agora?","alternativas":["13","14","15"],"correta":1,"explicacao":"8 + 6 = 14.","visual":["hats",8,6]},{"grupo":"Adição","titulo":"Material escolar","contexto":"Juntar","pergunta":"Há 4 lápis, 2 borrachas, 1 régua e 6 canetas. Quantos itens são?","alternativas":["11","12","13"],"correta":2,"explicacao":"4 + 2 + 1 + 6 = 13.","visual":["school",4,2,1,6]},{"grupo":"Adição","titulo":"Brinquedos da caixa","contexto":"Juntar","pergunta":"Há 9 carrinhos e 3 bonecos. Quantos brinquedos há ao todo?","alternativas":["11","12","13"],"correta":1,"explicacao":"9 + 3 = 12.","visual":["toys",9,3]},{"grupo":"Adição","titulo":"Reta numérica","contexto":"Somar","pergunta":"Comece no 7 e avance 5 casas. Em qual número você chega?","alternativas":["11","12","13"],"correta":1,"explicacao":"7 + 5 = 12.","visual":["line",7,5]},{"grupo":"Adição","titulo":"Decomposição","contexto":"Compor","pergunta":"Qual soma forma o número 14?","alternativas":["10 + 4","9 + 4","8 + 5"],"correta":0,"explicacao":"10 + 4 = 14.","visual":["blocks",10,4]},{"grupo":"Subtração","titulo":"Dinheiro na cantina","contexto":"Retirar","pergunta":"Vivian tinha 20 reais e gastou 7. Quanto sobrou?","alternativas":["11","12","13"],"correta":2,"explicacao":"20 − 7 = 13.","visual":["money",20,7]},{"grupo":"Subtração","titulo":"Lápis perdidos","contexto":"Perder","pergunta":"Hudson tinha 9 lápis e perdeu 4. Com quantos ficou?","alternativas":["4","5","6"],"correta":1,"explicacao":"9 − 4 = 5.","visual":["pencils",9,4]},{"grupo":"Subtração","titulo":"Livros retirados","contexto":"Retirar","pergunta":"Havia 13 livros. Foram retirados 5. Quantos sobraram?","alternativas":["7","8","9"],"correta":1,"explicacao":"13 − 5 = 8.","visual":["books",13,5]},{"grupo":"Subtração","titulo":"Alunos na roda","contexto":"Completar","pergunta":"A professora quer 18 alunos na roda. Já há 11. Quantos faltam?","alternativas":["6","7","8"],"correta":1,"explicacao":"18 − 11 = 7.","visual":["kids",18,11]},{"grupo":"Subtração","titulo":"Ovos da receita","contexto":"Completar","pergunta":"A receita precisa de 10 ovos. Há 6. Quantos faltam?","alternativas":["3","4","5"],"correta":1,"explicacao":"10 − 6 = 4.","visual":["eggs",10,6]},{"grupo":"Subtração","titulo":"Açúcar do doce","contexto":"Completar","pergunta":"São necessárias 9 colheres de açúcar. Há 5. Quantas faltam?","alternativas":["3","4","5"],"correta":1,"explicacao":"9 − 5 = 4.","visual":["spoons",9,5]},{"grupo":"Subtração","titulo":"Comparando idades","contexto":"Comparar","pergunta":"Bruna tem 12 anos e Brenda 7. Quantos anos a mais Bruna tem?","alternativas":["4","5","6"],"correta":1,"explicacao":"12 − 7 = 5.","visual":["ages",12,7]},{"grupo":"Subtração","titulo":"Ração dos cachorros","contexto":"Comparar","pergunta":"Thor recebeu 15 porções e Apollo 9. Quantas porções Apollo recebeu a menos?","alternativas":["5","6","7"],"correta":1,"explicacao":"15 − 9 = 6.","visual":["bowls",15,9]},{"grupo":"Subtração","titulo":"Bandejas da padaria","contexto":"Comparar","pergunta":"Uma bandeja tem 11 salgados e outra 6. Qual é a diferença?","alternativas":["4","5","6"],"correta":1,"explicacao":"11 − 6 = 5.","visual":["snacks",11,6]},{"grupo":"Subtração","titulo":"Maçãs do mercado","contexto":"Completar","pergunta":"André queria 14 maçãs e levou 9. Quantas faltaram?","alternativas":["4","5","6"],"correta":1,"explicacao":"14 − 9 = 5.","visual":["apples",14,9]}];
+
+const icons = {
+  balls:"⚽", shirts:"👕", cups:"🥤", medals:"🏅", cars:"🚗", hats:"🎉",
+  school:"✏️", toys:"🧸", line:"🔢", blocks:"🟨", money:"💵", pencils:"✏️",
+  books:"📚", kids:"🧒", eggs:"🥚", spoons:"🥄", ages:"🎂", bowls:"🍽️",
+  snacks:"🥟", apples:"🍎"
+};
+
+function objects(icon,n){
+  let s="";
+  for(let i=0;i<n;i++) s+=icon+" ";
+  return s.trim();
+}
+
+function visual(v){
+  const k=v[0], a=v[1], b=v[2], c=v[3];
+  if(k==="shirts"){
+    return `<div class="scene">
+      <div class="group"><div class="name">Verdes</div><div class="objects">${objects("🟩",a)}</div><div class="count">${a}</div></div>
+      <div class="group"><div class="name">Vermelhas</div><div class="objects">${objects("🟥",b)}</div><div class="count">${b}</div></div>
+      <div class="group"><div class="name">Azuis</div><div class="objects">${objects("🟦",c)}</div><div class="count">${c}</div></div>
+    </div>`;
+  }
+  if(k==="school"){
+    const vals=[["✏️",a,"Lápis"],["🩹",b,"Borrachas"],["📏",c,"Régua"],["🖊️",6,"Canetas"]];
+    return `<div class="scene">${vals.map(x=>`<div class="group"><div class="name">${x[2]}</div><div class="objects">${objects(x[0],x[1])}</div><div class="count">${x[1]}</div></div>`).join("")}</div>`;
+  }
+  if(k==="line"){
+    let nums=""; for(let i=0;i<=14;i++) nums+=`<span style="display:inline-block;min-width:30px;padding:8px 4px;border:1px solid #d9e2ef">${i}</span>`;
+    return `<div style="width:100%;text-align:center"><div style="font-weight:700;margin-bottom:10px">Comece em ${a} e avance ${b}</div><div style="overflow:auto;white-space:nowrap">${nums}</div></div>`;
+  }
+  if(k==="blocks"){
+    return `<div class="scene"><div class="group"><div class="name">Decompondo 14</div><div class="objects">${objects("🟨",a)} ${objects("🟦",b)}</div><div class="count">${a} + ${b}</div></div></div>`;
+  }
+  if(k==="money"){
+    return `<div class="scene"><div class="group"><div class="name">Tinha</div><div class="objects">💵</div><div class="count">R$ ${a}</div></div><div class="group"><div class="name">Gastou</div><div class="objects">🛒</div><div class="count">R$ ${b}</div></div></div>`;
+  }
+  if(["kids","eggs","spoons","ages","bowls","snacks","apples"].includes(k)){
+    const labelMap={kids:["Total desejado","Já estão"],eggs:["Precisa","Tem"],spoons:["Precisa","Tem"],ages:["Bruna","Brenda"],bowls:["Thor","Apollo"],snacks:["Bandeja A","Bandeja B"],apples:["Queria","Levou"]};
+    const [la,lb]=labelMap[k];
+    const ic=icons[k];
+    return `<div class="scene"><div class="group"><div class="name">${la}</div><div class="objects">${ic}</div><div class="count">${a}</div></div><div class="group"><div class="name">${lb}</div><div class="objects">${ic}</div><div class="count">${b}</div></div></div>`;
+  }
+  const ic=icons[k]||"🔵";
+  return `<div class="scene"><div class="group"><div class="name">Grupo 1</div><div class="objects">${objects(ic,a)}</div><div class="count">${a}</div></div><div class="group"><div class="name">Grupo 2</div><div class="objects">${objects(ic,b)}</div><div class="count">${b}</div></div></div>`;
+}
+
+function montar(){
+  const grid=document.getElementById("grid");
+  grid.innerHTML="";
+  atividades.forEach((q,i)=>{
+    const card=document.createElement("div");
+    card.className="qcard";
+    card.dataset.grupo=q.grupo;
+    card.innerHTML=`
+      <div class="qhead"><h3>${i+1}. ${q.titulo}</h3>
+        <div class="tags"><span class="tag ${q.grupo==="Subtração"?"sub":"add"}">${q.grupo}</span><span class="tag">${q.contexto}</span></div>
+      </div>
+      <div class="visual"><div class="canvas">${visual(q.visual)}</div></div>
+      <div class="body">
+        <p class="question">${q.pergunta}</p>
+        ${q.alternativas.map((x,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}) ${x}</label>`).join("")}
+        <div class="feedback"></div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+function filtrar(grupo,btn){
+  document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  document.querySelectorAll(".qcard").forEach(c=>c.style.display=(grupo==="Todos"||c.dataset.grupo===grupo)?"":"none");
+}
+
+function corrigir(){
+  let ac=0,resp=0,add=0,sub=0;
+  document.querySelectorAll(".qcard").forEach((card,i)=>{
+    card.querySelectorAll(".option").forEach(x=>x.classList.remove("correct","wrong"));
+    const q=atividades[i], m=card.querySelector("input:checked"), fb=card.querySelector(".feedback");
+    if(!m){fb.style.display="block";fb.innerHTML="⚠️ <strong>Não respondida.</strong>";return;}
+    resp++;
+    const v=Number(m.value);
+    if(v===q.correta){
+      ac++; if(q.grupo==="Adição")add++; else sub++;
+      m.closest(".option").classList.add("correct");
+      fb.innerHTML="✅ <strong>Correto!</strong> "+q.explicacao;
+    } else {
+      m.closest(".option").classList.add("wrong");
+      card.querySelectorAll(".option")[q.correta].classList.add("correct");
+      fb.innerHTML="❌ <strong>Vamos revisar:</strong> "+q.explicacao;
+    }
+    fb.style.display="block";
+  });
+  const r=document.getElementById("result");
+  r.innerHTML=`Respondidas: <strong>${resp}/${atividades.length}</strong><br>Adição: <strong>${add}/10</strong> | Subtração: <strong>${sub}/10</strong><br>Total: <strong>${ac}/${atividades.length}</strong><br>${ac>=18?"🌟 Excelente!":ac>=14?"👏 Muito bom!":ac>=10?"🙂 Bom trabalho! Revise os erros.":"💪 Continue treinando e tente novamente."}`;
+  r.style.display="block"; r.scrollIntoView({behavior:"smooth",block:"center"});
+}
+function refazer(){
+  document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);
+  document.querySelectorAll(".option").forEach(x=>x.classList.remove("correct","wrong"));
+  document.querySelectorAll(".feedback").forEach(x=>{x.style.display="none";x.innerHTML=""});
+  const r=document.getElementById("result"); r.style.display="none"; r.innerHTML="";
+}
+montar();
+</script>
+</body>
+</html>
