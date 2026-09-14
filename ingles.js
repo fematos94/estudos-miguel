@@ -1,34 +1,34 @@
 const I=[
-['Frutas','Sweet fruits','What does “Persimmon” mean?',['Caqui','Figo','Mamão'],0,'Persimmon = caqui.','persimmon'],
-['Frutas','Sweet fruits','What does “Fig” mean?',['Mamão','Figo','Caqui'],1,'Fig = figo.','fig'],
-['Frutas','Sweet fruits','What does “Papaya” mean?',['Mamão','Amora','Ameixa'],0,'Papaya = mamão.','papaya'],
-['Frutas','Semi acidic fruits','What does “Guava” mean?',['Goiaba','Romã','Framboesa'],0,'Guava = goiaba.','guava'],
-['Frutas','Semi acidic fruits','What does “Plum” mean?',['Kiwi','Ameixa','Figo'],1,'Plum = ameixa.','plum'],
-['Frutas','Semi acidic fruits','Which word means “kiwi”?',['Kiwi','Fig','Guava'],0,'Kiwi = kiwi.','kiwi'],
-['Frutas','Acidic fruits','What does “Pomegranate” mean?',['Romã','Amora','Mamão'],0,'Pomegranate = romã.','pomegranate'],
-['Frutas','Acidic fruits','What does “Raspberry” mean?',['Framboesa','Goiaba','Ameixa'],0,'Raspberry = framboesa.','raspberry'],
-['Frutas','Acidic fruits','What does “Blackberry” mean?',['Amora','Caqui','Figo'],0,'Blackberry = amora.','blackberry'],
-['Vegetais','Leaves','Which word means “alface”?',['Lettuce','Arugula','Carrot'],0,'Lettuce = alface.','lettuce'],
-['Vegetais','Leaves','What does “Arugula” mean?',['Rúcula','Cebola','Pepino'],0,'Arugula = rúcula.','arugula'],
-['Vegetais','Vitamin A','What does “Carrot” mean?',['Cenoura','Beterraba','Batata'],0,'Carrot = cenoura.','carrot'],
-['Vegetais','Vitamin A','What does “Cucumber” mean?',['Pepino','Abobrinha','Pimentão'],0,'Cucumber = pepino.','cucumber'],
-['Vegetais','Fibers','Which word means “abobrinha”?',['Zucchini','Eggplant','Broccoli'],0,'Zucchini = abobrinha.','zucchini'],
-['Vegetais','Fibers','What does “Eggplant” mean?',['Berinjela','Beterraba','Cebola'],0,'Eggplant = berinjela.','eggplant'],
-['Vegetais','Raw','What does “Onion” mean?',['Cebola','Pepino','Alface'],0,'Onion = cebola.','onion'],
-['Vegetais','Raw','Which word means “beterraba”?',['Beet','Pepper','Potato'],0,'Beet = beterraba.','beet'],
-['Vegetais','Vitamin C','What does “Potato” mean?',['Batata','Pimentão','Brócolis'],0,'Potato = batata.','potato'],
-['Vegetais','Vitamin C','What does “Pepper” mean in this study sheet?',['Pimentão','Pimenta-do-reino','Pepino'],0,'Na folha, Pepper = pimentão.','pepper'],
-['Vegetais','Vitamin C','What does “Broccoli” mean?',['Brócolis','Rúcula','Cenoura'],0,'Broccoli = brócolis.','broccoli'],
-['Números','Numbers','How do we write 1 in English?',['One','Two','Ten'],0,'1 = One.','num1'],
-['Números','Numbers','How do we write 3 in English?',['Five','Three','Eight'],1,'3 = Three.','num3'],
-['Números','Numbers','Which number is “Six”?',['4','6','9'],1,'Six = 6.','num6'],
-['Números','Numbers','Which number is “Eight”?',['8','7','10'],0,'Eight = 8.','num8'],
-['Números','Numbers','How do we write 10 in English?',['Ten','Nine','Two'],0,'10 = Ten.','num10'],
-['Cores','Colors','What color is “Orange”?',['Laranja','Roxo','Marrom'],0,'Orange = laranja.','orange'],
-['Cores','Colors','What color is “Purple”?',['Vermelho','Roxo','Verde'],1,'Purple = roxo.','purple'],
-['Cores','Colors','What color is “Green”?',['Verde','Amarelo','Marrom'],0,'Green = verde.','green'],
-['Cores','Colors','What color is “Brown”?',['Marrom','Vermelho','Laranja'],0,'Brown = marrom.','brown'],
-['Cores','Colors','Which pair is correct?',['Red = vermelho','Yellow = roxo','Green = amarelo'],0,'Red = vermelho.','red']
+['Frutas','Sweet fruits (frutas doces)','Qual é o significado (tradução) de “Persimmon” em português?',['Figo','Caqui','Mamão'],1,'Persimmon = caqui.','persimmon'],
+['Frutas','Sweet fruits (frutas doces)','Qual é o significado (tradução) de “Fig” em português?',['Figo','Mamão','Caqui'],0,'Fig = figo.','fig'],
+['Frutas','Sweet fruits (frutas doces)','Qual é o significado (tradução) de “Papaya” em português?',['Amora','Ameixa','Mamão'],2,'Papaya = mamão.','papaya'],
+['Frutas','Semi acidic fruits (frutas semiácidas)','Qual é o significado (tradução) de “Guava” em português?',['Romã','Goiaba','Framboesa'],1,'Guava = goiaba.','guava'],
+['Frutas','Semi acidic fruits (frutas semiácidas)','Qual é o significado (tradução) de “Plum” em português?',['Kiwi','Figo','Ameixa'],2,'Plum = ameixa.','plum'],
+['Frutas','Semi acidic fruits (frutas semiácidas)','Qual é o significado (tradução) de “Kiwi” em português?',['Kiwi','Figo','Goiaba'],0,'Kiwi = kiwi.','kiwi'],
+['Frutas','Acidic fruits (frutas ácidas)','Qual é o significado (tradução) de “Pomegranate” em português?',['Mamão','Romã','Amora'],1,'Pomegranate = romã.','pomegranate'],
+['Frutas','Acidic fruits (frutas ácidas)','Qual é o significado (tradução) de “Raspberry” em português?',['Goiaba','Ameixa','Framboesa'],2,'Raspberry = framboesa.','raspberry'],
+['Frutas','Acidic fruits (frutas ácidas)','Qual é o significado (tradução) de “Blackberry” em português?',['Amora','Caqui','Figo'],0,'Blackberry = amora.','blackberry'],
+['Vegetais','Are leaves (são folhas)','Qual é o significado (tradução) de “Lettuce” em português?',['Rúcula','Alface','Cenoura'],1,'Lettuce = alface.','lettuce'],
+['Vegetais','Are leaves (são folhas)','Qual é o significado (tradução) de “Arugula” em português?',['Pepino','Cebola','Rúcula'],2,'Arugula = rúcula.','arugula'],
+['Vegetais','Rich in vitamin A (ricos em vitamina A)','Qual é o significado (tradução) de “Carrot” em português?',['Cenoura','Beterraba','Batata'],0,'Carrot = cenoura.','carrot'],
+['Vegetais','Rich in vitamin A (ricos em vitamina A)','Qual é o significado (tradução) de “Cucumber” em português?',['Abobrinha','Pepino','Pimentão'],1,'Cucumber = pepino.','cucumber'],
+['Vegetais','Rich in fibers (ricos em fibras)','Qual é o significado (tradução) de “Zucchini” em português?',['Brócolis','Berinjela','Abobrinha'],2,'Zucchini = abobrinha.','zucchini'],
+['Vegetais','Rich in fibers (ricos em fibras)','Qual é o significado (tradução) de “Eggplant” em português?',['Berinjela','Beterraba','Cebola'],0,'Eggplant = berinjela.','eggplant'],
+['Vegetais','Can be eaten raw (podem ser consumidos crus)','Qual é o significado (tradução) de “Onion” em português?',['Pepino','Cebola','Alface'],1,'Onion = cebola.','onion'],
+['Vegetais','Can be eaten raw (podem ser consumidos crus)','Qual é o significado (tradução) de “Beet” em português?',['Cebola','Pimentão','Beterraba'],2,'Beet = beterraba.','beet'],
+['Vegetais','Rich in vitamin C (ricos em vitamina C)','Qual é o significado (tradução) de “Potato” em português?',['Batata','Pimentão','Brócolis'],0,'Potato = batata.','potato'],
+['Vegetais','Rich in vitamin C (ricos em vitamina C)','Qual é o significado (tradução) de “Pepper” em português, de acordo com a folha de estudos?',['Pepino','Pimentão','Pimenta-do-reino'],1,'Na folha de estudos, Pepper = pimentão.','pepper'],
+['Vegetais','Rich in vitamin C (ricos em vitamina C)','Qual é o significado (tradução) de “Broccoli” em português?',['Rúcula','Cenoura','Brócolis'],2,'Broccoli = brócolis.','broccoli'],
+['Números','Numbers (números)','Como escrevemos o número 1 em inglês?',['One','Two','Ten'],0,'1 = One.','num1'],
+['Números','Numbers (números)','Como escrevemos o número 3 em inglês?',['Five','Three','Eight'],1,'3 = Three.','num3'],
+['Números','Numbers (números)','Qual número corresponde à palavra “Six”?',['4','9','6'],2,'Six = 6.','num6'],
+['Números','Numbers (números)','Qual número corresponde à palavra “Eight”?',['8','7','10'],0,'Eight = 8.','num8'],
+['Números','Numbers (números)','Como escrevemos o número 10 em inglês?',['Nine','Ten','Two'],1,'10 = Ten.','num10'],
+['Cores','Colors (cores)','Qual é a tradução da cor “Orange” para o português?',['Roxo','Marrom','Laranja'],2,'Orange = laranja.','orange'],
+['Cores','Colors (cores)','Qual é a tradução da cor “Purple” para o português?',['Roxo','Vermelho','Verde'],0,'Purple = roxo.','purple'],
+['Cores','Colors (cores)','Qual é a tradução da cor “Green” para o português?',['Amarelo','Verde','Marrom'],1,'Green = verde.','green'],
+['Cores','Colors (cores)','Qual é a tradução da cor “Brown” para o português?',['Vermelho','Laranja','Marrom'],2,'Brown = marrom.','brown'],
+['Cores','Colors (cores)','Qual é a tradução da cor “Red” para o português?',['Vermelho','Amarelo','Verde'],0,'Red = vermelho.','red']
 ];
 
 const svgWrap=(inner)=>`<svg viewBox="0 0 220 160" role="img" aria-hidden="true" style="width:min(220px,90%);height:auto">${inner}</svg>`;
@@ -55,10 +55,10 @@ function visualIng(k){
     beet:svgWrap('<circle cx="110" cy="92" r="44" fill="#a23b72"/><path d="M98 53 Q82 28 70 22 M111 51 Q113 23 122 16 M125 55 Q146 30 158 28" stroke="#4b9a51" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M110 136 Q104 151 92 155" stroke="#9b5373" stroke-width="5" fill="none"/>'),
     pepper:svgWrap('<path d="M78 62 C82 43 98 39 110 49 C122 39 139 43 143 62 C159 71 160 104 146 124 C134 141 89 141 76 124 C61 104 62 72 78 62Z" fill="#d94e3f"/><path d="M108 48 Q110 29 123 25" stroke="#4a883f" stroke-width="8" fill="none" stroke-linecap="round"/>')
   };
-  return `<div class="port-visual">${art[k]||''}</div>`
+  return `<div class="port-visual">${art[k]||''}</div>`;
 }
 function montarIng(){const g=document.getElementById('gridIng');g.innerHTML='';I.forEach((q,i)=>{const c=document.createElement('div');c.className='qcard';c.dataset.grupo=q[0];c.innerHTML=`<div class="qhead"><h3>${i+1}. ${q[1]}</h3><div class="tags"><span class="tag">${q[0]}</span></div></div><div class="visual"><div class="canvas">${visualIng(q[6])}</div></div><div class="body"><p class="question">${q[2]}</p>${q[3].map((x,j)=>`<label class="option"><input type="radio" name="i${i}" value="${j}"> ${String.fromCharCode(65+j)}) ${x}</label>`).join('')}<div class="feedback"></div></div>`;g.appendChild(c)})}
 function filtrarIng(g,b){document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('#gridIng .qcard').forEach(c=>c.style.display=g==='Todos'||c.dataset.grupo===g?'':'none')}
-function corrigirIng(){let ac=0,rp=0;document.querySelectorAll('#gridIng .qcard').forEach((c,i)=>{c.querySelectorAll('.option').forEach(x=>x.classList.remove('correct','wrong'));const q=I[i],m=c.querySelector('input:checked'),f=c.querySelector('.feedback');if(!m){f.style.display='block';f.innerHTML='⚠️ <strong>Não respondida.</strong>';return}rp++;if(+m.value===q[4]){ac++;m.closest('.option').classList.add('correct');f.innerHTML='✅ <strong>Correct!</strong> '+q[5]}else{m.closest('.option').classList.add('wrong');c.querySelectorAll('.option')[q[4]].classList.add('correct');f.innerHTML='❌ <strong>Review:</strong> '+q[5]}f.style.display='block'});const r=document.getElementById('resultIng');r.innerHTML=`Respondidas: <strong>${rp}/${I.length}</strong><br>Acertos: <strong>${ac}/${I.length}</strong><br>${ac>=27?'🌟 Excellent!':ac>=22?'👏 Very good!':ac>=16?'🙂 Good job! Revise os erros.':'💪 Keep studying and try again!'}`;r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'center'})}
+function corrigirIng(){let ac=0,rp=0;document.querySelectorAll('#gridIng .qcard').forEach((c,i)=>{c.querySelectorAll('.option').forEach(x=>x.classList.remove('correct','wrong'));const q=I[i],m=c.querySelector('input:checked'),f=c.querySelector('.feedback');if(!m){f.style.display='block';f.innerHTML='⚠️ <strong>Não respondida.</strong>';return}rp++;if(+m.value===q[4]){ac++;m.closest('.option').classList.add('correct');f.innerHTML='✅ <strong>Correto!</strong> '+q[5]}else{m.closest('.option').classList.add('wrong');c.querySelectorAll('.option')[q[4]].classList.add('correct');f.innerHTML='❌ <strong>Vamos revisar:</strong> '+q[5]}f.style.display='block'});const r=document.getElementById('resultIng');r.innerHTML=`Respondidas: <strong>${rp}/${I.length}</strong><br>Acertos: <strong>${ac}/${I.length}</strong><br>${ac>=27?'🌟 Excelente!':ac>=22?'👏 Muito bom!':ac>=16?'🙂 Bom trabalho! Revise os erros.':'💪 Continue estudando e tente novamente!'}`;r.style.display='block';r.scrollIntoView({behavior:'smooth',block:'center'})}
 function refazerIng(){document.querySelectorAll('#quizIng input[type=radio]').forEach(x=>x.checked=false);document.querySelectorAll('#gridIng .option').forEach(x=>x.classList.remove('correct','wrong'));document.querySelectorAll('#gridIng .feedback').forEach(x=>{x.style.display='none';x.innerHTML=''});document.getElementById('resultIng').style.display='none'}
 montarIng();
